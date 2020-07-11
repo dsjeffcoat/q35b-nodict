@@ -48,7 +48,8 @@ class NoDict:
         if new_node in self.buckets[index]:
             existing_node = self.buckets[index].index(new_node)
             self.buckets[index][existing_node] = new_node
-        self.buckets[index].append(new_node)
+        else:
+            self.buckets[index].append(new_node)
 
     def get(self, key):
         '''Method should perform a key-lookup in the NoDict class. It should
